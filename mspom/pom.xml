@@ -12,7 +12,7 @@
   <properties>
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	    <jlc.artifact.version>0.0.1</jlc.artifact.version>
-	    <spring.artifact.version>3.2.9.RELEASE</spring.artifact.version>
+	    <spring.artifact.version>4.1.4.RELEASE</spring.artifact.version>
   </properties>
 
   <modules>
@@ -337,7 +337,7 @@
 			 <dependency>
 					  <groupId>org.springframework</groupId>
 					  <artifactId>spring-jms</artifactId>
-					  <version>${spring.artifact.version}</version>
+					  <version>3.2.5.RELEASE</version>
 			 </dependency>
 		 
 		     <dependency>
@@ -348,8 +348,15 @@
 				 	
 			<dependency>
 					  <groupId>org.springframework</groupId>
-					  <artifactId>spring-test</artifactId>	
-					  <version>${spring.artifact.version}</version>
+					  <artifactId>spring-test</artifactId>
+					  <version>4.1.1.RELEASE</version>
+				      <scope>test</scope>
+				      <exclusions>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-core</artifactId>
+						</exclusion>
+				 	 </exclusions>		
 			</dependency>
 			
 			<dependency>
@@ -372,21 +379,43 @@
 			</dependency>
 			
 			<dependency>
+				<groupId>org.apache.struts</groupId>
+				<artifactId>struts2-json-plugin</artifactId>
+				<version>2.3.28.1</version>
+			</dependency>
+			
+			<dependency>
 					  <groupId>org.apache.struts</groupId>
 					  <artifactId>struts2-core</artifactId>
 					  <version>2.3.28.1</version>
 			</dependency>
 			
 			<dependency>
-					<groupId>org.apache.struts</groupId>
-					<artifactId>struts2-json-plugin</artifactId>
-					<version>2.3.28.1</version>
-			</dependency>	
-				
-			<dependency>
 					  <groupId>org.apache.struts</groupId>
 					  <artifactId>struts2-spring-plugin</artifactId>
 					  <version>2.3.28.1</version>
+					   <exclusions>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-beans</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-context</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-core</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-test</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>org.springframework</groupId>
+							<artifactId>spring-web</artifactId>
+						</exclusion>
+				 </exclusions>
 			</dependency>
 				
 			<dependency>
@@ -399,6 +428,12 @@
 					  <groupId>com.alibaba</groupId>
 					  <artifactId>dubbo</artifactId>
 					  <version>2.5.3</version>
+					  <exclusions>
+						<exclusion>
+							<artifactId>spring</artifactId>
+							<groupId>org.springframework</groupId>
+						</exclusion>
+				     </exclusions>
 			</dependency>
 				 
 			<dependency>
@@ -432,9 +467,9 @@
 			</dependency>
 			
 			<dependency>
-				  <groupId>com.alibaba</groupId>
-				  <artifactId>fastjson</artifactId>
-				  <version>1.2.4</version>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.4</version>
 			</dependency>
 			
 			
