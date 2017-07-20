@@ -483,7 +483,16 @@
 			    <artifactId>gson</artifactId>
 			    <version>2.2.4</version>
 			</dependency>
-
+			<dependency>    
+	            <groupId>javax.mail</groupId>    
+	            <artifactId>mail</artifactId>    
+	            <version>1.4.7</version>    
+	        </dependency>  
+			<dependency>
+				<groupId>com.alipay</groupId>
+				<artifactId>api-java</artifactId>
+				<version>20170324180803</version>
+			</dependency>
 	  </dependencies>  
 	</dependencyManagement>
 </project>
