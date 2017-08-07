@@ -10,7 +10,11 @@
   <name>mspom</name>
 
   <properties>
-	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>  
+        <maven.compiler.encoding>UTF-8</maven.compiler.encoding>  
+        <maven.compiler.target>1.6</maven.compiler.target> 
+   		<maven.compiler.source>1.6</maven.compiler.source> 
 	    <jlc.artifact.version>0.0.1</jlc.artifact.version>
 	    <spring.artifact.version>4.1.4.RELEASE</spring.artifact.version>
   </properties>
